@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -19,6 +20,21 @@ button {
     padding: 5px 15px;
 }
 
+select {
+    width: 250px;
+    font-size: 60px;
+    padding: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    background-color: #EE0DA7;
+}
+
+select:focus, button:focus {
+    outline: none;
+}
+
 .btn-settings {
     position: absolute;
     bottom: 30px;
@@ -30,8 +46,84 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: #8B1EEF;
     height: 140px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    color: #fafafa;
+    letter-spacing: 1px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 60px;
+    border-bottom: 5px solid #fafafa;
+}
+
+.settings.hide {
+    transform: translateY(-100%)
+}
+
+.container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(255 255 255);
+    position: relative;
+    text-align: center;
+    width: 600px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 60px;
+    background: linear-gradient(270deg, #8B1EEF, #EE0DA7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+small {
+    color: #fafafa;
+}
+
+h1 {
+    margin: 0;
+    color: #fafafa;
+}
+
+input {
+    border: 0;
+    border-radius: 4px;
+    font-size: 24px;
+    width: 300px;
+    padding: 14px 20px;
+    margin-top: 10px;
+}
+
+.score-container {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    color: #fafafa;
+}
+
+.time-container {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    color: #fafafa;
+}
+
+.end-game-container {
+    background-color: inherit;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
